@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Go API",
+      "runtimeExecutable": "go",
+      "runtimeArgs": ["run", "."],
+      "port": 8080
+    },
+    {
+      "name": "React Frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 5173
+    }
+  ]
+}
