@@ -14,10 +14,6 @@ build:
 	cd backend && go build -o ../server .
 	@echo "Build complete → ./server + ./frontend/dist"
 
-# ── Deploy to Railway ─────────────────────────────────────────────────────
+# ── Deploy to Apps Platform ───────────────────────────────────────────────
 deploy:
-	@which railway > /dev/null 2>&1 || (echo "Installing Railway CLI..." && brew install railway)
-	railway up --detach
-	@echo ""
-	@echo "Deployed! Run 'railway open' to view your live URL."
-	@echo "Make sure GREENHOUSE_API_KEY is set in Railway dashboard → Variables."
+	~/.local/bin/apps-platform app deploy
